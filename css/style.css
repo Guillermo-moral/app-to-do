@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Parte estática de la interfaz */
+
+/* No depende de los datos */
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+form {
+  padding: 20px;
+  border-bottom: 1px dashed #999;
+}
+
+form input[type='text'] {
+  display: block;
+  border: none;
+  border-bottom: 1px solid #333;
+  padding: 5px;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #333;
+  font-size: 1em;
+  width: 300px;
+  margin: 0 auto;
+}
+
+form input[type='submit'] {
+  display: block;
+  background-color: #fff;
+  width: 100px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 0.9em;
+  color: #333;
+  border: 1px solid #333;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px 0;
+  margin: 10px auto 0;
+  cursor: pointer;
+}
+
+.tareas {
+  width: 600px;
+  margin: 0 auto;
+}
+
+/* Parte dependiente de los datos */
+
+/* Todo el estilo tenemos que pensarlo como un componente */
+
+/* Algo que puedo reutilizar */
+
+.tarea {
+  border: 1px solid #999;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.tarea h3 {
+  font-weight: normal;
+  font-size: 1.2em;
+  color: #333;
+  display: none;
+}
+
+.tarea input {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.2em;
+  color: #333;
+  border: none;
+  display: none;
+  border-bottom: 1px dashed #999;
+  width: 100%;
+}
+
+.tarea .visible {
+  display: block;
+}
+
+.boton-tarea {
+  display: inline-block;
+  width: 80px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 5px 0;
+  font-size: 0.9em;
+  text-align: center;
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.estado {
+  display: inline-block;
+  -webkit-appearance: none;
+  /* Deshabilitamos la apariencia de iphone */
+  appearance: none;
+  width: 50px;
+  height: 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #999;
+  position: relative;
+}
+
+.estado span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #c00;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: left 0.4s, background-color 0.3s;
+}
+
+.estado.terminada span {
+  background-color: #0c0;
+  left: 30px;
+}
